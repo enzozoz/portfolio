@@ -975,6 +975,79 @@
         }, 400);
       });
     })();
-    </script>
+
+    /* ── PERFORMANCES CAROUSEL ── */
+    (function() {
+      const track   = document.getElementById('perf-track');
+      const prevBtn = document.getElementById('perf-prev');
+      const nextBtn = document.getElementById('perf-next');
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const TILE_W = 460, GAP = 20, STEP = TILE_W + GAP;
+
+      const originals = Array.from(track.querySelectorAll('.project-tile'));
+      const N = originals.length;
+      originals.forEach(t => t.classList.remove('active'));
+
+      // 3 sets of clones for large buffer — prevents visible scroll-through on wrap
+      for (let b = 0; b < 3; b++) {
+        const frag = document.createDocumentFragment();
+        originals.forEach(t => frag.appendChild(t.cloneNode(true)));
+        track.insertBefore(frag, track.firstChild);
+      }
+      for (let b = 0; b < 3; b++) {
+        originals.forEach(t => track.appendChild(t.cloneNode(true)));
+      }
+
+      const allTiles = Array.from(track.querySelectorAll('.project-tile'));
+      const OFFSET = 3 * N; // start at middle set
+      let pos = OFFSET, busy = false;
+
+      function getTranslate(idx) {
+        const cw = document.getElementById('perf-carousel').offsetWidth;
+        const center = (cw - TILE_W) / 2;
+        // First tile of any set: flush left (same as projects)
+        if (idx % N === 0) return idx * STEP - 80;
+        return idx * STEP - center + 80;
+      }
+
+      function setActive(idx) {
+        const realIdx = ((idx - OFFSET) % N + N) % N + OFFSET;
+        allTiles.forEach((t, i) => t.classList.toggle('active', i === idx));
+      }
+
+      function jumpTo(idx) {
+        allTiles.forEach(t => t.style.transition = 'none');
+        track.style.transition = 'none';
+        pos = idx;
+        track.style.transform = `translateX(-${getTranslate(pos)}px)`;
+        setActive(pos);
+        void track.offsetWidth;
+        requestAnimationFrame(() => allTiles.forEach(t => t.style.transition = ''));
+      }
+
+      function slideTo(idx) {
+        if (busy) return;
+        busy = true;
+        pos = idx;
+        track.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1)';
+        track.style.transform = `translateX(-${getTranslate(pos)}px)`;
+        setActive(pos);
+      }
+
+      track.addEventListener('transitionend', e => {
+        if (e.propertyName !== 'transform') return;
+        busy = false;
+        // Re-center if drifting toward edge of buffer
+        if (pos < N) jumpTo(pos + N * 3);
+        else if (pos >= N * 4) jumpTo(pos - N * 3);
+      });
+
+      prevBtn.addEventListener('click', () => { if (!busy) slideTo(pos - 1); });
+      nextBtn.addEventListener('click', () => { if (!busy) slideTo(pos + 1); });
+
+      requestAnimationFrame(() => jumpTo(OFFSET));
+    })();
+  </script>
 </body>
 </html>
