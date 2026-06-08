@@ -345,6 +345,7 @@
       <a href="#experience">experience</a>
       <a href="#projects">projects</a>
       <a href="#stack">tech stack</a>
+      <a href="#performances">performances</a>
       <a href="#contact" class="cta">contact</a>
     </nav>
   </header>
@@ -358,6 +359,9 @@
         <p class="greeting">hey, i'm <span class="name">enzo</span></p>
         <div class="typewriter-wrap">
           <span class="typewriter-text" id="typewriter"></span><span class="blink-cursor"></span>
+        </div>
+        <div id="click-hint" style="margin-top:6px;opacity:0;transition:opacity 0.8s ease;animation:fadein 0.9s ease 1.5s both;">
+          <span style="font-size:0.68rem;letter-spacing:0.1em;color:#555;">click on me!</span>
         </div>
         <div id="scroll-hint">
           <span>scroll down to learn more</span>
@@ -591,7 +595,153 @@
 
     <div class="divider"></div>
 
-    <!-- CONTACT -->
+    <!-- PERFORMANCES -->
+    <section class="block">
+      <p class="section-label" id="performances">performances</p>
+      <p style="font-size:0.8rem;color:#555;margin-bottom:24px;line-height:1.8;">performances i've been a part of — as a dancer, choreographer, or both. click any tile to watch.</p>
+
+      <div class="projects-carousel" id="perf-carousel">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="perf-track">
+
+            <div class="project-tile active" style="cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=HMFcz7QpGTY','_blank')">
+              <div class="project-img-slot" style="padding:0;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9;">
+                <img
+                  src="https://img.youtube.com/vi/HMFcz7QpGTY/hqdefault.jpg"
+                  alt="Isang Mahal 2024"
+                  style="width:100%;height:100%;object-fit:cover;display:block;"
+                  crossorigin="anonymous"
+                />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.85)"/>
+                    <polygon points="19,14 37,24 19,34" fill="#111"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Isang Mahal 2024</div>
+                <div class="project-desc">Cultural showcase hosted by PhilSA at Texas A&M. Performed as a dancer representing the Filipino dance community.</div>
+                <div class="project-tags"><span class="project-tag">PhilSA</span><span class="project-tag">Texas A&M</span><span class="project-tag">2024</span><span class="project-tag">Performer</span></div>
+              </div>
+            </div>
+            <div class="project-tile" style="cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=cbOAHKu3zY','_blank')">
+              <div class="project-img-slot" style="padding:0;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9;">
+                <img
+                  src="https://img.youtube.com/vi/cbOAHKu3zY/hqdefault.jpg"
+                  alt="Goodphil 2025"
+                  style="width:100%;height:100%;object-fit:cover;display:block;"
+                  crossorigin="anonymous"
+                />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.85)"/>
+                    <polygon points="19,14 37,24 19,34" fill="#111"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Goodphil 2025</div>
+                <div class="project-desc">Annual cultural show hosted by PhilSA at Texas A&M. Performed as part of the ensemble.</div>
+                <div class="project-tags"><span class="project-tag">PhilSA</span><span class="project-tag">Texas A&M</span><span class="project-tag">2025</span><span class="project-tag">Performer</span></div>
+              </div>
+            </div>
+            <div class="project-tile" style="cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=pA0Heod_Ucs','_blank')">
+              <div class="project-img-slot" style="padding:0;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9;">
+                <img
+                  src="https://img.youtube.com/vi/pA0Heod_Ucs/hqdefault.jpg"
+                  alt="Unity 2025 — UTFSA"
+                  style="width:100%;height:100%;object-fit:cover;display:block;"
+                  crossorigin="anonymous"
+                />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.85)"/>
+                    <polygon points="19,14 37,24 19,34" fill="#111"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Unity 2025 — UTFSA</div>
+                <div class="project-desc">Choreographed and performed for Unity hosted by Omega Phi Gamma at UT Austin, representing UT Filipino Student Association.</div>
+                <div class="project-tags"><span class="project-tag">OPhiG</span><span class="project-tag">UT Austin</span><span class="project-tag">2025</span><span class="project-tag">Choreographer</span></div>
+              </div>
+            </div>
+            <div class="project-tile" style="cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=8cfvifjpsvg','_blank')">
+              <div class="project-img-slot" style="padding:0;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9;">
+                <img
+                  src="https://img.youtube.com/vi/8cfvifjpsvg/hqdefault.jpg"
+                  alt="Unity 2025 — ATXKDC"
+                  style="width:100%;height:100%;object-fit:cover;display:block;"
+                  crossorigin="anonymous"
+                />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.85)"/>
+                    <polygon points="19,14 37,24 19,34" fill="#111"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Unity 2025 — ATXKDC</div>
+                <div class="project-desc">Choreographed a piece for ATXKDC at Unity 2025 hosted by Omega Phi Gamma at UT Austin.</div>
+                <div class="project-tags"><span class="project-tag">OPhiG</span><span class="project-tag">UT Austin</span><span class="project-tag">2025</span><span class="project-tag">Choreographer</span></div>
+              </div>
+            </div>
+            <div class="project-tile" style="cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=NVt_5c7OgFE','_blank')">
+              <div class="project-img-slot" style="padding:0;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9;">
+                <img
+                  src="https://img.youtube.com/vi/NVt_5c7OgFE/hqdefault.jpg"
+                  alt="Isang Mahal 2025"
+                  style="width:100%;height:100%;object-fit:cover;display:block;"
+                  crossorigin="anonymous"
+                />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.85)"/>
+                    <polygon points="19,14 37,24 19,34" fill="#111"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Isang Mahal 2025</div>
+                <div class="project-desc">Choreographed a piece for the Isang Mahal showcase hosted by PhilSA at Texas A&M.</div>
+                <div class="project-tags"><span class="project-tag">PhilSA</span><span class="project-tag">Texas A&M</span><span class="project-tag">2025</span><span class="project-tag">Choreographer</span></div>
+              </div>
+            </div>
+            <div class="project-tile" style="cursor:pointer;" onclick="window.open('https://www.youtube.com/watch?v=TsIBW2GS4c4','_blank')">
+              <div class="project-img-slot" style="padding:0;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9;">
+                <img
+                  src="https://img.youtube.com/vi/TsIBW2GS4c4/hqdefault.jpg"
+                  alt="Goodphil 2026"
+                  style="width:100%;height:100%;object-fit:cover;display:block;"
+                  crossorigin="anonymous"
+                />
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.85)"/>
+                    <polygon points="19,14 37,24 19,34" fill="#111"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-title">Goodphil 2026</div>
+                <div class="project-desc">Choreographed for Goodphil 2026, hosted by UTFSA at UT Austin.</div>
+                <div class="project-tags"><span class="project-tag">UTFSA</span><span class="project-tag">UT Austin</span><span class="project-tag">2026</span><span class="project-tag">Choreographer</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="perf-prev">&#8592;</button>
+          <button class="carousel-btn" id="perf-next">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+        <!-- CONTACT -->
     <section class="block">
       <p class="section-label" id="contact">contact</p>
       <p style="font-size:0.85rem;color:#666;margin-bottom:24px;line-height:1.8;">
@@ -649,6 +799,12 @@
     avatar.addEventListener('animationend', () => avatar.classList.remove('wiggling'));
 
     let clicked = false;
+    // Show click hint after 1.5s
+    setTimeout(() => {
+      const hint = document.getElementById('click-hint');
+      if (hint) hint.style.opacity = '1';
+    }, 1500);
+
     sprite.addEventListener('click', () => {
       if (clicked) return;
       clicked = true;
@@ -819,6 +975,6 @@
         }, 400);
       });
     })();
-  </script>
+    </script>
 </body>
 </html>
