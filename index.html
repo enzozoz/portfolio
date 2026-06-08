@@ -432,8 +432,11 @@
       }
     }
 
-    /* Hide hamburger on desktop */
+    /* Hide hamburger on desktop, show on mobile */
     #hamburger { display: none; }
+    @media (max-width: 768px) {
+      #hamburger { display: flex !important; }
+    }
 
     body::after {
       content: ''; position: fixed; inset: 0;
@@ -466,7 +469,7 @@
   <section id="landing">
     <div style="display:flex;flex-direction:column;align-items:center;gap:24px;">
       <div class="avatar-wrap" id="sprite">
-        <img class="avatar-body" id="avatar" src="assets/body.png" alt="Enzo" draggable="false" />
+        <img class="avatar-body" id="avatar" src="assets/peeking.png" alt="Enzo" draggable="false" />
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
         <p class="greeting">hey, i'm <span class="name">enzo</span></p>
@@ -543,7 +546,7 @@
       <p class="section-label" id="experience">experience</p>
       <div class="exp-list">
         <div class="exp-item" style="position:relative;overflow:visible;">
-          <img src="assets/peeking.png"
+          <img src="assets/body.png"
                style="position:absolute;left:-94px;bottom:0;height:215px;width:auto;
                       image-rendering:pixelated;pointer-events:none;z-index:4;" />
           <div>
